@@ -44,9 +44,9 @@ Because every prior turn is sourced from the request body, the backend has no au
 git clone https://github.com/Serhatcck/history-poison-lab
 cd history-poison-lab
 npm install
+cp env.example .env   # Fill your API Key
 npm run build         # or ts-node src/backend/app.ts if you prefer
 npm start             # listens on PORT (default 3000)
-cp env.example .env   # Fill your API Key
 ```
 
 
