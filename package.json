@@ -1,0 +1,31 @@
+{
+  "name": "history-poison-lab",
+  "version": "1.0.0",
+  "description": "First Commit",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file=.env dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhatcck/history-poison-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Serhatcck/history-poison-lab/issues"
+  },
+  "homepage": "https://github.com/Serhatcck/history-poison-lab#readme",
+  "dependencies": {
+    "@langchain/core": "^1.1.0",
+    "express": "^4.21.2",
+    "langchain": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "typescript": "^5.9.3"
+  }
+}
