@@ -1,9 +1,12 @@
 import * as z from "zod";
 import express, { Request, Response } from "express";
+import path from "path";
 import { graph } from "./react_agent/graph";
 
 
 const app = express();
+const uiDir = path.resolve(process.cwd(), "src/ui");
+const appHtmlPath = path.join(uiDir, "app.html");
 app.use(express.json());
 
 // Request validation schema
@@ -80,6 +83,12 @@ app.post("/api/chat", async (req: Request, res: Response) => {
             });
         }
     }
+});
+
+// Static assets & HTML served at /app
+app.use("/", express.static(uiDir));
+app.get("/", (_req: Request, res: Response) => {
+    res.sendFile(appHtmlPath);
 });
 
 // Start server
